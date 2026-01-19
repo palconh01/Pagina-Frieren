@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Pablo Alcón Hernández" />
+    <title>Inicio de Sesión</title>
+    <link
+      rel="shortcut icon"
+      href="IMG/Frieren_Beyond_Journey's_End_logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <meta description="Pagina de inicio de sesion" />
+  </head>
+  <body>
+    <a class="tituloMain" href="index.html"
+      ><h1>Frieren Beyond Journey's End</h1></a>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="personajes.html">Personajes</a></li>
+        <li><a href="login.html">Iniciar Sesion/ Registrarse</a></li>
+      </ul>
+    </nav>
+   
+      <main>
+      <form class="formulario-contacto" method="post" action="index.html" target="_blank">
+        <fieldset>
+          <legend>Datos Personales</legend>
+          <label for="nombre">Nombre En los registros del gremio </label>
+          <input type="text" placeholder="Tu nombre Completo" name="nombre" />
+          <br />
+          <label for="NombreUsuario">Titulo Arcano</label>
+          <input type="text" placeholder="Tu Nombre de usuario" maxlength="20" name="NombreUsuario" />
+          <br />
+          <label for="Contraseña">Hechizo Secreto</label>
+          <input type="password" placeholder="Tu contraseña" name="Contraseña" />
+          <br />
+          <label for="ContraseñaC">Repite el hechizo</label>
+          <input type="password" placeholder="Vuelve a escribir tu contraseña" name="Contraseñac" />
+          <br />
+          <label for="correo">Búho Mensajero</label>
+          <input type="email" placeholder="Tu correo" name="correo" />
+          <br />
+          <label for="telefono">Cristal de comunicación</label>
+          <input type="tel" placeholder="Tu telefono" name="telefono" />
+          <br />
+          <label for="fechaNacimiento">Fecha de Nacimiento</label>
+          <input type="date" name="fechaNacimiento" />
+          <br />
+          <label for="radioG">Género</label>
+          <input type="radio" name="radioB" value="Hombre" />Hombre
+          <input type="radio" name="radioB" value="Mujer" />Mujer
+          <input type="radio" name="radioB" value="Otro" />Otro
+          <br />
+          <label for="cv-upload">Pergamino de logros</label>
+          <input type="file" name="CV" id="cv-upload" accept=".pdf" />
+        </fieldset>
+        <fieldset>
+          <legend>Preferencias De Perfil</legend>
+          <label for="Pais">Reino donde habitas</label>
+          <select name="Pais">
+            <option selected value="España">España</option>
+            <option value="Francia">Francia</option>
+            <option value="Italia">Italia</option>
+            <option value="Alemania">Alemania</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Reino Unido">Reino Unido</option>
+            <option value="Otro">Otro</option>
+          </select>
+          <br />
+          <label for="Idiomas">Lenguas que dominas</label>
+          <input type="checkbox" name="español" id="español" />Español
+          <input type="checkbox" name="ingles" id="ingles" />Inglés
+          <input type="checkbox" name="frances" id="frances" />Francés
+          <input type="checkbox" name="aleman" id="aleman" />Alemán
+          <br />
+          <label for="color">Color de tu aura</label>
+          <input type="color" name="color" />
+          <br />
+          <label for="nivel">Cantidad de Mana</label>
+          <input type="range" name="nivel" min="1" max="10" />
+          <br />
+          <label for="url">Portal a tu grimorio digital</label>
+          <input type="url" placeholder="Ej. www.ejemplo.com" name="url" />
+          <br />
+          <label for="DireccionP">Ubicacion de tu aldea</label>
+          <textarea rows="1" cols="30" name="Postal" id="DireccionPostal"
+          ></textarea>
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend>Configuracion De Cuenta</legend>
+          <label for="AceptarTerminos">Jurar fidelidad al gremio</label>
+          <input required type="checkbox" name="Aceptar Terminos" />
+          <br />
+          <label for="Notis">Permitir mensajes del gremio</label>
+          <input type="radio" name="radioB" value="Si" />Si
+          <input type="radio" name="radioB" value="No" />No
+          <br />
+          <label for="zonaH">Reloj astral</label>
+          <select name="ZonaH">
+            <option selected value="España">UTC-11</option>
+            <option value="Francia">UTC-10</option>
+            <option value="Italia">UTC-9:30</option>
+            <option value="Alemania">UTC-9</option>
+            <option value="Portugal">UTC-8</option>
+            <option value="Reino Unido">UTC-7</option>
+            <option value="Otro">UTC-6</option>
+          </select>
+          <br />
+          <label for="Cod_invi">Nº de runa secreta</label>
+          <input type="number" name="Numero" id="Numero" min="0" max="3" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Extras Opcionles</legend>
+          <label for="search">Explorar en el grimorio</label>
+          <input type="search" name="search" />
+          <input type="hidden" name="hidden" value="valorOculto" />
+          <label for="hora-contacto">Hora preferida para ser invocado</label>
+          <input type="time" id="hora-contacto" name="hora-contacto" />
+
+          <label for="personaje-fav">Comapañero de viaje preferido:</label>
+          <input list="personajes-lista"name="personaje-fav"id="personaje-fav"/>
+          <datalist id="personajes-lista">
+            <option value="Frieren"></option>
+            <option value="Fern"></option>
+            <option value="Stark"></option>
+            <option value="Himmel"></option>
+            <option value="Otros"></option>
+          </datalist>
+        </fieldset>
+        <fieldset>
+          <legend>Controles Adicionales</legend>
+          <input type="submit" value="Enviar" />
+          <input type="reset" name="Reset" id="Reset" value="Reiniciar Todo" />
+        </fieldset>
+      </form>
+    
+</main>
+    <footer>
+      <div class="volver-arriba">
+        <a href="#top" class="btn-arriba">^Volver arriba</a>
+      </div>
+      <p>2025 — Página creada por Pablo Alcón Hernández</p>
+    </footer>
+  </body>
+</html>
